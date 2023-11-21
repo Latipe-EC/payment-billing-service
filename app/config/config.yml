@@ -1,0 +1,71 @@
+Server:
+  Name: "Order Service APIs"
+  AppVersion: 1.0.0
+  BaseURI: 127.0.0.1:5000
+  Port: :5001
+  Mode: local
+  ReadTimeout: 5s
+  WriteTimeout: 5s
+  SSL: true
+  CtxDefaultTimeout: 12s
+  ExpirationLimitTime: 30s
+DB:
+  Mysql:
+    Host: 172.20.74.176
+    Port: 3306
+    UserName: root
+    Password: 123123@Dat
+    Database: backend_billing_payment_service
+    MaxOpenConns: 30
+    MaxIdleConns: 10
+    ConnMaxLifetime: 1799s
+    ConnMaxIdleTime: 5s
+  Mongodb:
+    Address:
+    Username:
+    Password:
+    DbName:
+    ConnectTimeout:
+    MaxConnIdleTime:
+    MinPoolSize:
+    MaxPoolSize:
+
+Cache:
+  Redis:
+    Address: localhost
+    Port: 6379
+    Password:
+    DB: 0
+
+RabbitMQ:
+  Connection: amqp://guest:guest@localhost:5672/
+  OrderEvent:
+    Exchange: order_exchange
+    RoutingKey: order_created_key
+    Queue: order_created_event_payment
+  EmailEvent:
+    Exchange: email_exchange
+    RoutingKey: email_routing_key
+    Queue: email_notify_queue
+  CartEvent:
+    Exchange:
+    RoutingKey:
+    Queue:
+  StoreEvent:
+    Exchange: store_exchange
+    RoutingKey: store_routing_key
+    Queue: internal.store
+  ConsumerName: create_orders_service
+  ProducerName: create_orders_service
+
+AdapterService:
+  UserService:
+    AuthURL: http://172.20.64.1:8081
+    UserURL: http://172.20.64.1:8181
+    InternalKey:
+  ProductService:
+    BaseURL: http://172.20.64.1:8645
+    InternalKey: fsf1AQOu6TVn+gNyjv22v9Cu/lW3HDF8QsSweKl5R6Me+rDO2Twyqkdbr8lZpRXkPL0MAcMA8AtgTrJAmSV5yA==
+  EmailService:
+    BaseURL: http://172.20.64.1:8181
+    InternalKey:
