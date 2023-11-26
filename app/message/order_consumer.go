@@ -107,6 +107,6 @@ func (mq ConsumerOrderMessage) orderHandler(msg amqp.Delivery) error {
 	if err := mq.pmService.CreatePaymentOfOrder(&message); err != nil {
 		return err
 	}
-	
+
 	return nil
 }
