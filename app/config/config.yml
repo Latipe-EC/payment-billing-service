@@ -11,7 +11,7 @@ Server:
   ExpirationLimitTime: 30s
 DB:
   Mysql:
-    Host: 172.20.74.176
+    Host: localhost
     Port: 3306
     UserName: root
     Password: 123123@Dat
@@ -60,12 +60,12 @@ RabbitMQ:
 
 AdapterService:
   UserService:
-    AuthURL: http://localhost::8081
-    UserURL: http://localhost::8181
+    AuthURL: http://172.20.64.1:8081
+    UserURL: http://172.20.64.1:8181
     InternalKey:
   ProductService:
-    BaseURL: http://localhost::8645
+    BaseURL: http://172.20.64.1:8645
     InternalKey: fsf1AQOu6TVn+gNyjv22v9Cu/lW3HDF8QsSweKl5R6Me+rDO2Twyqkdbr8lZpRXkPL0MAcMA8AtgTrJAmSV5yA==
   EmailService:
-    BaseURL: http://localhost::8181
+    BaseURL: http://172.20.64.1:8181
     InternalKey:
