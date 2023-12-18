@@ -60,12 +60,12 @@ RabbitMQ:
 
 AdapterService:
   UserService:
-    AuthURL: http://172.20.64.1:8081
-    UserURL: http://172.20.64.1:8181
+    AuthURL: http://localhost:8081
+    UserURL: http://localhost:8181
     InternalKey:
   ProductService:
-    BaseURL: http://172.20.64.1:8645
+    BaseURL: http://localhost:8645
     InternalKey: fsf1AQOu6TVn+gNyjv22v9Cu/lW3HDF8QsSweKl5R6Me+rDO2Twyqkdbr8lZpRXkPL0MAcMA8AtgTrJAmSV5yA==
   EmailService:
-    BaseURL: http://172.20.64.1:8181
+    BaseURL: http://localhost:8181
     InternalKey:
